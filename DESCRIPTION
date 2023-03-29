@@ -1,8 +1,8 @@
 Package: practicalSigni
 Type: Package
 Title: Practical Significance Ranking of Regressors
-Version: 0.1.0
-Date: 2023-02-16
+Version: 0.1.1
+Date: 2023-03-29
 Authors@R: c(person("Hrishikesh", "Vinod", role = c("aut", "cre"),
       email= "vinod@fordham.edu"))
 Encoding: UTF-8
@@ -29,8 +29,8 @@ Description: Consider a possibly nonlinear nonparametric regression
 License: GPL (>= 2)
 RoxygenNote: 7.2.3
 NeedsCompilation: no
-Packaged: 2023-02-16 20:40:15 UTC; vinod
+Packaged: 2023-03-29 15:55:04 UTC; vinod
 Author: Hrishikesh Vinod [aut, cre]
 Maintainer: Hrishikesh Vinod <vinod@fordham.edu>
 Repository: CRAN
-Date/Publication: 2023-02-17 10:00:09 UTC
+Date/Publication: 2023-03-29 17:10:05 UTC

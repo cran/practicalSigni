@@ -1,0 +1,5 @@
+Package: practicalSigni
+==============
+Version 0.1.1 [2023-03-29]
+o Added revised the vignette and fixed a reportRank() bug regarding NAs
+

@@ -73,7 +73,10 @@ y=sample(1:15,replace = TRUE)
 x1=sample(2:16, replace = TRUE)
 x2=sample(3:17, replace = TRUE)
 x3=sample(4:18,replace = TRUE)
-reportRank(y,bigx=cbind(x1,x2,x3))
+options(np.messages=FALSE)
+yes13=rep(1,13)
+yes13[10]=0
+reportRank(y,bigx=cbind(x1,x2,x3),yes13=yes13)
 }
 
 }

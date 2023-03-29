@@ -54,7 +54,10 @@
 #' x1=sample(2:16, replace = TRUE)
 #' x2=sample(3:17, replace = TRUE)
 #' x3=sample(4:18,replace = TRUE)
-#' reportRank(y,bigx=cbind(x1,x2,x3))
+#' options(np.messages=FALSE)
+#' yes13=rep(1,13)
+#' yes13[10]=0
+#' reportRank(y,bigx=cbind(x1,x2,x3),yes13=yes13)
 #' }
 #'
 #' @export
@@ -107,9 +110,9 @@ if(yesLatex==1) print(xtable::xtable(v15,digits=4))
   print("above v15 values of m1 to m5")}}
 #now compute rank numbers for m1 to m5
 nr=NROW(v15)
-rank15=((nr+1)-apply(v15,2,rank,na.last=TRUE, ties.method="average"))
+rank15=((nr+1)-apply(v15,2,rank,na.last="keep", ties.method="average"))
 if(verbo) print("ranks values as they are")
-avrank15=round(apply(rank15,1,mean),1)
+avrank15=round(apply(rank15,1,mean,na.rm=TRUE),1)
 r15=cbind(rank15,avrank15)
 if(verbo) {print(r15)
 if(yesLatex==1) print(xtable::xtable(r15,digits=2))}
@@ -119,11 +122,11 @@ rownames(v613)=nam
 if(verbo) {print(v613)
 if(yesLatex==1) print(xtable::xtable(v613,digits=4))}
 nr=NROW(v613)
-rank613=((nr+1)-apply(v613,2,rank,na.last=TRUE,
+rank613=((nr+1)-apply(v613,2,rank,na.last="keep",
                       ties.method="average"))
 if(verbo){
 print("sign adjusted (if necessary) ranks of p regressors")}
-avrank613=round(apply(rank613,1,mean),1)
+avrank613=round(apply(rank613,1,mean,na.rm=TRUE),1)
 r613=cbind(rank613,avrank613)
 if(verbo){
 print(r613)

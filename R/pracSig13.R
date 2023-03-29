@@ -88,6 +88,7 @@ pracSig13=function(y,bigx, yes13=rep(1,13),verbo=FALSE){
   print("Linear regression focusing of statistical significance")}
   importance=NULL
   p=NCOL(bigx)
+  options(np.messages=FALSE)
   mall=rep(NA,13)
   for(i in 1:13) mall[i]=paste("m",i,sep="")
   for(i in 1:13) assign(mall[i],rep(NA,p))
@@ -146,8 +147,11 @@ pracSig13=function(y,bigx, yes13=rep(1,13),verbo=FALSE){
   if (yes13[6]==1){
     if (verbo){
     print("m6=generalized partial correl. coeff")}
-  m6=as.vector(generalCorr::parcorVec(cbind(y,bigx)))
-  if (verbo){
+    if (p<5){
+  m6=as.vector(generalCorr::parcorVec(cbind(y,bigx)))}
+    if (p >= 5){
+      m6=as.vector(generalCorr::parcorVecH(cbind(y,bigx)))}
+    if (verbo){
     print(m6)}}
 
   if (yes13[7]==1){
@@ -160,7 +164,7 @@ pracSig13=function(y,bigx, yes13=rep(1,13),verbo=FALSE){
   if (yes13[8]==1){
     if (verbo){
     print("now m8 for local linear partials dy/dxi using np package")}
-  options(np.messages=FALSE)
+
   scaly=as.vector(scale(y))
   sbigx=apply(bigx,2,scale)
   m8=rep(NA,p) #place to store
