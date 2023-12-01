@@ -9,7 +9,7 @@
 #'  median as zero and other values as unity.
 #'
 #' @param x {numerical vector of data values}
-#' @return x {vector of zeros and ones split at the median}
+#' @return x vector of zeros and ones split at the median.
 #' @importFrom stats median
 #' @author Prof. H. D. Vinod, Fordham University, NY
 #'

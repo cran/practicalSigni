@@ -10,7 +10,7 @@ fncut(x)
 \item{x}{{numerical vector of data values}}
 }
 \value{
-x {vector of zeros and ones split at the median}
+x vector of zeros and ones split at the median.
 }
 \description{
 This is an internal function of the R package practicalSigni

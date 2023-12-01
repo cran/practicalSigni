@@ -11,7 +11,8 @@ pracSig13(y, bigx, yes13 = rep(1, 13), verbo = FALSE)
 
 \item{bigx}{{input matrix of p regressor variables}}
 
-\item{yes13}{{default vector of ones to compute all 13 measures.
+\item{yes13}{{vector of ones to compute respective
+13 measures m1 to m13. Default is all ones to compute all
 e.g., yes13[10]=0 means do not compute the m10 method.}}
 
 \item{verbo}{{logical to print results along the way default=FALSE}}
@@ -52,8 +53,8 @@ measuring the importance of regressors.
 }
 \details{
 If m6, m10 slow down computations, we recommend setting
-yes13[6]=0=yes13[10] to turn of computation of m6 and m10
-.
+yes13[6]=0=yes13[10] to turn off slowcomputation of m6 and m10
+at least initially to get quick answers for other m's.
 }
 \note{
 needs the function kern(), which requires package 'np'.

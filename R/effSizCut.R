@@ -21,14 +21,14 @@
 #' logical argument ane=TRUE in calling the function.
 #' ane=TRUE is the default. Set ane=FALSE for the second option.
 #'
-#' @param y { (T x 1) vector of dependent variable data values}
-#' @param bigx { (T x p) data matrix of xi regressor variables associated
-#'  with the regression}
+#' @param y { A (T x 1) vector of dependent variable data values.}
+#' @param bigx { A (T x p) data matrix of xi regressor variables associated
+#'  with the regression.}
 #' @param ane {logical variable controls the treatment of other regressors.
 #'  If ane=TRUE (default), other regressors are used in kernel regression
 #'  without forcing them to be binary variables. When ane=FALSE,
 #'  the kernel regression removes the effect of other regressors
-#'  when other regressors are also binary type categorical variables,}
+#'  when other regressors are also binary type categorical variables}
 #' @return out vector with p values of t-statistics for p regressors
 #' @note The aim is to answer the following question.
 #' Which regressor has the largest

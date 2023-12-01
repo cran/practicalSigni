@@ -7,16 +7,16 @@
 effSizCut(y, bigx, ane = TRUE)
 }
 \arguments{
-\item{y}{{ (T x 1) vector of dependent variable data values}}
+\item{y}{{ A (T x 1) vector of dependent variable data values.}}
 
-\item{bigx}{{ (T x p) data matrix of xi regressor variables associated
-with the regression}}
+\item{bigx}{{ A (T x p) data matrix of xi regressor variables associated
+with the regression.}}
 
 \item{ane}{{logical variable controls the treatment of other regressors.
 If ane=TRUE (default), other regressors are used in kernel regression
 without forcing them to be binary variables. When ane=FALSE,
 the kernel regression removes the effect of other regressors
-when other regressors are also binary type categorical variables,}}
+when other regressors are also binary type categorical variables}}
 }
 \value{
 out vector with p values of t-statistics for p regressors

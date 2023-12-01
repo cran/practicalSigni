@@ -18,8 +18,8 @@
 #'
 #'
 #'
-#' @param y { (T x 1) vector of dependent variable data values}
-#' @param bigx { (T x p) data marix of xi regressor variables associated
+#' @param y { A (T x 1) vector of dependent variable data y}
+#' @param bigx { a (T x p) data marix of xi regressor variables associated
 #'  with the regression}
 #' @param yesLatex {default 1 means print Latex-ready Tables}
 #' @param yes13 {default vector of ones to compute all 13 measures.}
@@ -30,6 +30,7 @@
 #' @param verbo {logical to print results by pracSig13, default=FALSE}
 #' @author Prof. H. D. Vinod, Economics Dept., Fordham University, NY
 #' @importFrom stats coef cor lm median residuals var
+#' @importFrom xtable xtable
 #' @seealso \code{\link{pracSig13}}
 #' @note The machine learning methods are subject to random seeds.
 #' For some seed values, m10 values from NNS.boost() rarely become
@@ -51,13 +52,13 @@
 #' \donttest{
 #' set.seed(9)
 #' y=sample(1:15,replace = TRUE)
-#' x1=sample(2:16, replace = TRUE)
+#' x0=sample(2:16, replace = TRUE)
 #' x2=sample(3:17, replace = TRUE)
 #' x3=sample(4:18,replace = TRUE)
 #' options(np.messages=FALSE)
 #' yes13=rep(1,13)
 #' yes13[10]=0
-#' reportRank(y,bigx=cbind(x1,x2,x3),yes13=yes13)
+#' reportRank(y,bigx=cbind(x0,x2,x3),yes13=yes13)
 #' }
 #'
 #' @export
